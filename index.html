@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./Imagenes/reloj-de-bolsillo.png">
+    <link rel="stylesheet" href="./TheArtOfYime.css" />
+    <title>TheArtOfTime</title>
+  </head>
+  <body>
+   
+    <div class="navbar">
+      <img src="./Imagenes/Logo.png" alt="Logo de TheArtOfTime" />
+      <ul>
+
+         <!-- Checkbox para activar/desactivar el menú -->
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  <label for="menu-toggle" class="menu-icon">☰</label>
+
+  <!-- Contenedor del menú -->
+  <ul class="menu">
+    <li><button class="navbar-button" onclick="location.href='#contacto'">Contacto</button></li>
+    <li><button class="navbar-button" onclick="location.href='#relojes'">Relojes</button></li>
+    <li><button class="navbar-button" onclick="location.href='#ABOUT US'">Sobre Nosotros</button></li>
+    <li><button class="navbar-button" onclick="location.href='./index-login.html'">Login</button></li>
+  </ul>
+    </div>
+
+    <div class="content">
+      <div class="content-wrapper">
+        <div class="slogan-img">
+          <img src="./Imagenes/fondo.jpg" alt="Imagen de fondo" />
+        </div>
+        <h1 class="Slogan">Creando relojes que cuentan tu historia...</h1>
+      </div>
+    </div>
+
+    <!-- Primer video y tarjetas -->
+    <div class="Relojes">
+      <div class="description-container">
+        <h2>El equilibrio entre la elegancia y la excelencia técnica</h2>
+        <p>
+          Reconocible inmediatamente, su diseño único ha forjado su identidad.
+          En su lanzamiento, el Day‑Date fue el único reloj con una ventana
+          semicircular a las 12 horas que mostraba el día de la semana con todas
+          las letras. Con su emblemático brazalete President, únicamente
+          disponible en metal precioso —oro o platino—, es el reloj de prestigio
+          por excelencia.
+        </p>
+      </div>
+
+      <div class="video-container" id="video">
+        <video autoplay muted loop>
+          <source src="./Imagenes/videoplayback (1).mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+    <section class="about-section" id="ABOUT US">
+      <div class="about-container">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          En <strong>The Art of Time</strong>, nos apasiona la precisión, la
+          elegancia y la innovación. Ofrecemos una cuidada selección de relojes
+          de lujo que combinan tecnología avanzada con diseños atemporales. Cada
+          reloj es más que un accesorio; es una declaración de estilo y
+          personalidad.
+        </p>
+        <h3>Nuestra Historia</h3>
+        <p>
+          Fundada en 1995, <strong>The Art of Time</strong> nació con el
+          propósito de redefinir la relojería de lujo. Lo que comenzó como un
+          pequeño taller de relojería, pronto se convirtió en una marca
+          reconocida por su excelencia en la fabricación de piezas sofisticadas
+          y exclusivas. Hoy en día, seguimos comprometidos con la tradición y la
+          artesanía, brindando a nuestros clientes lo mejor en diseño y
+          funcionalidad.
+        </p>
+      </div>
+    </section>
+
+    <!-- Segundo video y tarjetas -->
+    <div class="Relojes">
+      <div class="video-container" id="video">
+        <video autoplay muted loop>
+          <source src="./Imagenes/videoplayback (3).mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+
+      <div class="description-container">
+        <h2>Sharp-Edged Design</h2>
+        <p>
+          Esculpido con aleación de titanio de grado aeroespacial y
+          complementado con una correa de fluoroelastómero inspirada en las
+          pasarelas, este reloj combina a la perfección con tu estilo de vida
+          centrado en el fitness
+        </p>
+      </div>
+    </div>
+
+    <section id="relojes">
+      <div class="Titulo">Nuevas Colecciones</div>
+
+      <div class="new-cards-container" id="new-cards">
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-1.jpg"
+                alt="Descripción de la imagen 1"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Prestige Saddle</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    Curren con este modelo busca satisfacer las necesidades de
+                    sus clientes,no solo con sus productos,que se caracterizan
+                    por su alta calidad y precio competitivo en el mercado,sino
+                    tambien por su servicio que ofrece
+                    <div class="price1">300$</div>
+                <div class="price2">175$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-2.jpg"
+                alt="Descripción de la imagen 2"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Midnight Celeste</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    El Midnight Celeste destaca por su diseño sofisticado y
+                    contemporáneo, con una esfera que evoca la belleza del cielo
+                    nocturno. Su color azul profundo y detalles en oro o acero
+                    inoxidable le confieren un aire de lujo El Midnight Celeste
+                    es más que un simple reloj; es una declaración de estilo y
+                    un símbolo de la maestría relojera de Ulysse Nardin.
+                    <div class="price1">200.99$</div>
+                    <div class="price2">175$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-4.jpg"
+                alt="Descripción de la imagen 4"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Sovereign Rustic</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    La clave del Sovereign Rustic está en su correa. El cuero
+                    utilizado tiene un acabado rústico, con una textura
+                    ligeramente irregular que aporta un toque de autenticidad y
+                    carácter. Este detalle, combinado con la elegancia del
+                    diseño, crea un reloj único que se adapta a cualquier
+                    ocasión.
+                 <div class="price1">200.99$</div>
+                <div class="price2">175$</div> 
+                </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-5.jpg"
+                alt="Descripción de la imagen 5"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Silver Zenith</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    es un reloj de diseño minimalista y elegante, con un toque
+                    de sofisticación moderna. Su caja de acero inoxidable
+                    pulido, de un plateado brillante, refleja la luz con un
+                    brillo sutil y elegante. El dial de color blanco, con
+                    números romanos y manecillas finas, aporta un toque de
+                    distinción.
+                    <div class="price1">750.99$</div>
+                    <div class="price2">550$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-6.jpg"
+                alt="Descripción de la imagen 6"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Chrono Pulse</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    es un reloj para el hombre que busca un accesorio versátil
+                    que se adapte a su estilo de vida activo. Su diseño
+                    deportivo, combinado con su elegancia y funcionalidad, lo
+                    convierten en el compañero perfecto para cualquier aventura.
+                  
+                    <div class="price2">175$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-7.jpg"
+                alt="Descripción de la imagen 7"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Rolex Emerald Luxe</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    es una obra maestra de la relojería que combina la
+                    sofisticación del oro con la frescura del verde. Este reloj,
+                    con su caja de oro amarillo de 18 quilates, presenta un
+                    acabado en cuarzo que no solo garantiza precisión, sino que
+                    también aporta un brillo sutil y lujoso
+                    <div class="price1">600$</div>
+                    <div class="price2">349.99$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-9.jpg"
+                alt="Descripción de la imagen 9"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Aevum Leather</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    es un reloj que te ofrece un estilo clásico y elegante, con
+                    la calidad y la durabilidad que esperas de un reloj de
+                    primera clase. Es la elección perfecta para el hombre
+                    moderno que busca un reloj que refleje su buen gusto y su
+                    estilo persona
+                   
+                    <div class="price2">400$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-11.jpg"
+                alt="Descripción de la imagen 11"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Rolex Ebony</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    es una obra maestra que combina la tradición de la relojería
+                    suiza con la calidez y la belleza natural de la madera. Este
+                    reloj no solo es un accesorio, sino una declaración de
+                    estilo que refleja un gusto refinado.
+                    <div class="price1">299.99$</div>
+                <div class="price2">175$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-card">
+          <div class="new-content">
+            <div class="new-front">
+              <img
+                src="./Imagenes/exhibición-12.jpg"
+                alt="Descripción de la imagen 12"
+              />
+              <div class="new-front-content">
+                <div class="new-description">
+                  <div class="new-title">
+                    <strong>Casio Lumina</strong>
+                  </div>
+                  <p class="new-card-footer">
+                    Un reloj de acero inoxidable plateado con un diseño elegante
+                    y moderno. Su dial negro con detalles plateados ofrece una
+                    legibilidad excepcional, mientras que su resistencia al agua
+                    y la larga duración de la batería lo convierten en un
+                    compañero perfecto para el día a día.
+                    
+                    <div class="price2">199.99$</div> 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="new-back">
+              <div class="new-back-content">
+                <strong></strong>
+                <button class="new-buy-button">Comprar Ahora</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agrega más nuevas cards según sea necesario -->
+      </div>
+    </section>
+    <section id="contacto">
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Conócenos</h3>
+          <ul>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Historia</a></li>
+            <li><a href="#">Nuestro Equipo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Atención al Cliente</h3>
+          <ul>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Envíos</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Redes Sociales</h3>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contacta con Nosotros</h3>
+          <p>Dirección: Calle de la Moda, 123, Ciudad, País</p>
+          <p>Email: info@relojesdelujo.com</p>
+          <p>Teléfono: +123 456 7890</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 The Art Of Time. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </section>
+    <script src="./theartoftime.js"></script>
+  </body>
+</html>

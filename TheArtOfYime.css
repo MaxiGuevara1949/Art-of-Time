@@ -1,0 +1,548 @@
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed; /* Fijo en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+  padding: 10px 20px; /* Espaciado interno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex; /* Usar flexbox para alinear elementos */
+  justify-content: space-between; /* Espacio entre el logo y los botones */
+}
+
+.navbar img {
+  height: 50px; /* Altura del logo */
+}
+
+.navbar ul {
+  list-style: none; /* Sin viñetas */
+  display: flex; /* Para alinear los elementos en fila */
+  margin-left: auto; /* Empujar la lista a la derecha */
+}
+
+.navbar ul li {
+  margin-left: 10px; /* Espaciado entre los elementos */
+}
+
+.navbar-button {
+  min-width: 20px; /* Ancho mínimo */
+  position: relative;
+  cursor: pointer;
+  padding: 12px 17px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 7px; /* Bordes redondeados */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); /* Sombra interna */
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(71, 81, 92, 1) 0%,
+    rgba(11, 21, 30, 1) 45%
+  ); /* Fondo degradado */
+  color: rgba(255, 255, 255, 0.66); /* Color del texto */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.navbar-button:hover {
+  color: rgba(255, 255, 255, 1); /* Color del texto al hacer hover */
+  transform: scale(1.1) translateY(-3px); /* Escala y desplazamiento */
+}
+
+/* Contenido principal */
+.content {
+  margin-top: 80px; /* Espacio para el navbar fijo */
+  padding: 20px;
+}
+
+.content-wrapper {
+  display: flex; /* Usar flexbox para alinear elementos en fila */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.slogan-img {
+  flex: 1; /* Toma el 50% del espacio disponible */
+  margin-right: 20px; /* Espacio entre la imagen y el eslogan */
+}
+
+.slogan-img img {
+  max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.Slogan {
+  flex: 1; /* Toma el 50% del espacio disponible */
+  font-size: 100px;
+  color: aliceblue;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+}
+
+/* Video */
+.video-container {
+  position: relative; /* Corregido: se agregó el punto y coma */
+  width: 100%; /* Ancho del contenedor */
+  height: 550px; /* Altura del video */
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%); /* Centra el video */
+  z-index: -1; /* Envía el video detrás del contenido */
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las cards se ajusten en varias filas */
+  justify-content: space-between; /* Espacio entre las cards */
+  margin: 20px 0; /* Espacio superior e inferior */
+}
+
+.card {
+  background-color: white; /* Fondo blanco para las cards */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin: 10px; /* Espacio entre las cards */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+  width: calc(33.33% - 20px); /* Ancho fijo para las cards (3 columnas) */
+  transition: transform 0.3s ease; /* Transición suave para la animación */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Escala al hacer hover */
+}
+
+.card img {
+  max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+/* Efectos de tarjeta */
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front,
+.back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+.front {
+  transform: rotateY(0deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+/* Círculos animados */
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.Relojes {
+  display: flex; /* Usar flexbox para alinear video y descripción */
+  justify-content: space-between; /* Espacio entre la descripción y el video */
+  margin: 20px 0; /* Espacio superior e inferior */
+}
+
+.description-container {
+  flex: 1; /* Toma el 50% del espacio disponible */
+  padding: 20px; /* Espaciado interno */
+  color: white; /* Color del texto */
+}
+
+.video-container {
+  flex: 1; /* Toma el 50% del espacio disponible */
+  position: relative;
+  height: 550px; /* Altura del video */
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+.new-card {
+  background-color: white; /* Fondo blanco para las nuevas cards */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin: 20px; /* Espacio entre las nuevas cards */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+  width: calc(33.33% - px); /* Ancho fijo para las nuevas cards (3 columnas) */
+  transition: transform 0.3s ease; /* Transición suave para la animación */
+}
+
+.new-card:hover {
+  transform: scale(1.05); /* Escala al hacer hover */
+}
+
+.new-buy-button {
+  background-color: #ffbb66; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.new-buy-button:hover {
+  background-color: #ff8866; /* Color de fondo al hacer hover */
+}
+.new-cards-container {
+  display: grid; /* Usar grid para la disposición */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Crear columnas responsivas */
+  gap: 20px; /* Espacio entre las cards */
+  margin: 20px 0; /* Espacio superior e inferior */
+}
+.new-card img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.new-front {
+  overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+}
+/* Ajustar el contenido de las tarjetas en .cards-container */
+.cards-container .card .content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Configuración inicial: mostrar el lado posterior */
+.cards-container .card .front {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.cards-container .card .back {
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Girar la tarjeta al pasar el mouse para mostrar la imagen */
+.cards-container .card:hover .content {
+  transform: rotateY(180deg);
+}
+
+.cards-container .card .front img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+/* Estilos del footer */
+footer {
+  background-color: #1a1a1a;
+  color: #d4af37; /* Dorado */
+  padding: 40px 200px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 22%;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin: 10px 0;
+}
+
+.footer-column a {
+  color: #d4af37;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: #000;
+  color: #d4af37;
+  padding: 20px 0;
+}
+.Titulo {
+  font-size: 1.4em;
+  color: #fff;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 0.9em;
+}
+.SobreNosotros {
+  text-align: left;
+  font-size: 0px;
+  color: #fff;
+}
+.text-section {
+  margin: 20px 0; /* Espacio superior e inferior */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .footer-column {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* Estilos para la sección Sobre Nosotros */
+.about-section {
+  background-color: #1a1a1a;
+  color: #d4af37;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.about-container h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-container h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.about-container p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 10px auto;
+  color: #ffffff;
+}
+.price1 {
+  text-decoration: line-through;
+  color: grey;
+}
+.price2 {
+  color: #ff2233;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Ocultar el checkbox */
+.menu-checkbox {
+  display: none;
+}
+
+/* Icono del menú hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+/* Estilos del menú en escritorio */
+.menu {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+/* Modo responsive: ocultar menú en móviles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Mostrar el icono de menú */
+  }
+
+  .menu {
+    display: none; /* Ocultar menú inicialmente */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* Mostrar menú cuando el checkbox está marcado */
+  .menu-checkbox:checked ~ .menu {
+    display: none;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+}

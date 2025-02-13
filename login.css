@@ -1,0 +1,105 @@
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario {
+  background-color: rgba(26, 26, 26, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 350px;
+}
+
+h1 {
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #d4af37;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #d4af37;
+  color: black;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: black;
+}
+
+.recordar {
+  font-size: 0.9em;
+  color: #d4af37;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Registrarse a {
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 1em;
+  margin-top: 15px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.Registrarse a:hover {
+  color: white;
+}
+.boton-link {
+  display: block;
+  text-align: center;
+  background-color: #d4af37;
+  color: black;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.boton-link:hover {
+  background-color: white;
+  color: black;
+}
