@@ -14,30 +14,36 @@
     <title>TheArtOfTime</title>
   </head>
   <body>
-   
+
     <div class="navbar">
-      <img src="./Imagenes/Logo.png" alt="Logo de TheArtOfTime" />
-      <ul>
-
-         <!-- Checkbox para activar/desactivar el menú -->
-  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-  <label for="menu-toggle" class="menu-icon">☰</label>
-
-  <!-- Contenedor del menú -->
-  <ul class="menu">
-    <li><button class="navbar-button" onclick="location.href='#contacto'">Contacto</button></li>
-    <li><button class="navbar-button" onclick="location.href='#relojes'">Relojes</button></li>
-    <li><button class="navbar-button" onclick="location.href='#ABOUT US'">Sobre Nosotros</button></li>
-    <li><button class="navbar-button" onclick="location.href='./index-login.html'">Login</button></li>
-  </ul>
+      <!-- Checkbox oculto para controlar el menú -->
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    
+      <!-- Botón para abrir el menú -->
+      <label for="menu-toggle" class="abrir-menu">☰</label>
+    
+      <!-- Menú de navegación -->
+      <nav class="menu">
+          <!-- Botón para cerrar el menú -->
+          <label for="menu-toggle" class="cerrar-menu">✖</label>
+          <ul>
+              <li><a href="#contacto" class="navbar-button">Contacto</a></li>
+              <li><a href="#relojes" class="navbar-button">Relojes</a></li>
+              <li><a href="#about-us" class="navbar-button">Sobre Nosotros</a></li> <!-- ID corregido -->
+              <li><a href="./index-login.html" class="navbar-button">Login</a></li>
+          </ul>
+      </nav>
     </div>
-
+    
+  
+ 
     <div class="content">
       <div class="content-wrapper">
         <div class="slogan-img">
-          <img src="./Imagenes/fondo.jpg" alt="Imagen de fondo" />
-        </div>
-        <h1 class="Slogan">Creando relojes que cuentan tu historia...</h1>
+          <img src="./Imagenes/fondo.jpg" alt="Imagen de fondo" id="reloj2"  />
+
+         </div>
+        <h1 class="Slogan" id="texto-1">Creando relojes que cuentan tu historia...</h1>
       </div>
     </div>
 
@@ -62,7 +68,7 @@
         </video>
       </div>
     </div>
-    <section class="about-section" id="ABOUT US">
+    <section class="about-section" id="about-us">
       <div class="about-container">
         <h2>Sobre Nosotros</h2>
         <p>

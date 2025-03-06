@@ -442,18 +442,38 @@ footer {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+
+@media (max-width: 750px) {
+  .Relojes {
+    display: block;
+  }
+
+  .video-container {
+    position: relative;
+    align-items: end;
+  }
+  .description-container {
+    align-items: center;
+    font-size: x-large;
+  }
   .footer-column {
-    width: 45%;
+    justify-content: center;
+    display: block;
+    margin: 20px;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .about-container {
+    font-size: larger;
+  }
+  .content-wrapper {
+    height: 45%;
+    align-items: center;
   }
 }
 
-@media (max-width: 480px) {
-  .footer-column {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
 /* Estilos para la sección Sobre Nosotros */
 .about-section {
   background-color: #1a1a1a;
@@ -518,31 +538,141 @@ html {
   display: flex;
   margin-left: auto;
 }
+/*celu*/
+/* Ocultar el checkbox */
+.menu-checkbox {
+  display: none;
+}
 
-/* Modo responsive: ocultar menú en móviles */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block; /* Mostrar el icono de menú */
-  }
+/* Estilos del botón abrir */
+.abrir-menu {
+  display: block;
+  font-size: 24px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
+}
 
-  .menu {
-    display: none; /* Ocultar menú inicialmente */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
-    text-align: center;
-  }
+/* Estilos del menú móvil */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  z-index: 1000;
+}
 
-  /* Mostrar menú cuando el checkbox está marcado */
-  .menu-checkbox:checked ~ .menu {
+/* Mostrar menú cuando el checkbox está activado */
+.menu-checkbox:checked ~ .menu {
+  right: 0;
+}
+
+/* Estilos del botón cerrar */
+.cerrar-menu {
+  display: block;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Estilos generales del menú */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: end;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+@media (min-width: 751px) {
+  .abrir-menu {
     display: none;
   }
 
+  .menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: none;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .menu li {
-    margin: 10px 0;
+    margin: 0 15px;
+  }
+
+  .menu a {
+    font-size: 16px;
+    padding: 10px 15px;
+    color: white;
+  }
+
+  .cerrar-menu {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    z-index: 1000;
+  }
+
+  .menu-checkbox:checked ~ .menu {
+    right: 0;
+  }
+
+  .abrir-menu {
+    display: block;
   }
 }
